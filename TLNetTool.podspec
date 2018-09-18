@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TLNetTool"
-  s.version      = "0.2"
+  s.version      = "0.3"
   s.summary      = "基于 Alamofire 封装的网络库，基于 KingFisher 封装的网络图片加载方式"
 
   # This description is used to generate tags and improve search results.
@@ -137,5 +137,5 @@ Pod::Spec.new do |s|
   # 
   s.dependency 'Kingfisher'
   s.dependency 'Alamofire'
-  s.swift_version = '4.1'
+  s.swift_version = '4.2'
 end
