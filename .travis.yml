@@ -1,0 +1,5 @@
+language: Swift
+osx_image: xcode10
+xcode_project: TLNetTool.xcodeproj
+script: xcodebuild -project TLNetTool.xcodeproj -scheme "TLNetTool" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=latest'
+
