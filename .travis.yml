@@ -8,3 +8,5 @@ install:
 - carthage update --platform iOS
 script: xcodebuild -project TLNetTool.xcodeproj -scheme "TLNetTool" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=latest'
 cartfile: ./Cartfile
+cache:
+- carthage
