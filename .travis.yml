@@ -3,7 +3,7 @@ osx_image: xcode10.2
 xcode_project: TLNetTool.xcodeproj
 before_install:
 - brew update
-- brew upgrade carthage
+# - brew upgrade carthage
 install:
 - carthage update --platform iOS
 script: xcodebuild -project TLNetTool.xcodeproj -scheme "TLNetTool" -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone X,OS=latest'
