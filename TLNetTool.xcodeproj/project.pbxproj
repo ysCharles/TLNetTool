@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,45 +13,15 @@
 		9E4897CC20E214A3002AD654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4897CA20E214A3002AD654 /* Main.storyboard */; };
 		9E4897CE20E214A4002AD654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E4897CD20E214A4002AD654 /* Assets.xcassets */; };
 		9E4897D120E214A4002AD654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E4897CF20E214A4002AD654 /* LaunchScreen.storyboard */; };
-		9E4897D920E21630002AD654 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4897D720E21630002AD654 /* Alamofire.framework */; };
-		9E4897DA20E21630002AD654 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4897D820E21630002AD654 /* Kingfisher.framework */; };
 		9E4897DC20E21676002AD654 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897DB20E21676002AD654 /* UIImageExtension.swift */; };
 		9E4897DE20E21752002AD654 /* WebImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E4897DD20E21752002AD654 /* WebImageExtension.swift */; };
-		9E4897DF20E217EC002AD654 /* TLNetTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4897B020E211E5002AD654 /* TLNetTool.framework */; };
-		9E4897E020E217EC002AD654 /* TLNetTool.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4897B020E211E5002AD654 /* TLNetTool.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E4897E320E217EC002AD654 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4897D720E21630002AD654 /* Alamofire.framework */; };
-		9E4897E420E217EC002AD654 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4897D720E21630002AD654 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E4897E520E217EC002AD654 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4897D820E21630002AD654 /* Kingfisher.framework */; };
-		9E4897E620E217EC002AD654 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4897D820E21630002AD654 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A24FCB4D924CD1635E1551F9 /* Pods_TLNetTool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14EF8492A52D18073D890C1B /* Pods_TLNetTool.framework */; };
+		B076800231A15FB5CF1AB0FB /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F382567A7B1E1BAB81E87FF /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		9E4897E120E217EC002AD654 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9E4897A720E211E5002AD654 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9E4897AF20E211E5002AD654;
-			remoteInfo = TLNetTool;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		9E4897E720E217EC002AD654 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9E4897E020E217EC002AD654 /* TLNetTool.framework in Embed Frameworks */,
-				9E4897E620E217EC002AD654 /* Kingfisher.framework in Embed Frameworks */,
-				9E4897E420E217EC002AD654 /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
+		14EF8492A52D18073D890C1B /* Pods_TLNetTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TLNetTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F382567A7B1E1BAB81E87FF /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4897B020E211E5002AD654 /* TLNetTool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TLNetTool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4897BC20E2125D002AD654 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E4897BE20E213CC002AD654 /* NetUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetUtils.swift; sourceTree = "<group>"; };
@@ -66,6 +36,10 @@
 		9E4897D820E21630002AD654 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		9E4897DB20E21676002AD654 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		9E4897DD20E21752002AD654 /* WebImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebImageExtension.swift; sourceTree = "<group>"; };
+		A0878241EEFFB6AC00C909BB /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BE2128472982821A2B8C38D1 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		BE6C1A74145A4128BC3000A4 /* Pods-TLNetTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLNetTool.debug.xcconfig"; path = "Target Support Files/Pods-TLNetTool/Pods-TLNetTool.debug.xcconfig"; sourceTree = "<group>"; };
+		EDDDE7C924C0E433FB623BA5 /* Pods-TLNetTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TLNetTool.release.xcconfig"; path = "Target Support Files/Pods-TLNetTool/Pods-TLNetTool.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E4897D920E21630002AD654 /* Alamofire.framework in Frameworks */,
-				9E4897DA20E21630002AD654 /* Kingfisher.framework in Frameworks */,
+				A24FCB4D924CD1635E1551F9 /* Pods_TLNetTool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,9 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E4897DF20E217EC002AD654 /* TLNetTool.framework in Frameworks */,
-				9E4897E520E217EC002AD654 /* Kingfisher.framework in Frameworks */,
-				9E4897E320E217EC002AD654 /* Alamofire.framework in Frameworks */,
+				B076800231A15FB5CF1AB0FB /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +69,7 @@
 				9E4897C520E214A3002AD654 /* Example */,
 				9E4897B120E211E5002AD654 /* Products */,
 				9E4897D620E21630002AD654 /* Frameworks */,
+				CE0F9682D949282B75AAA742 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,8 +111,21 @@
 			children = (
 				9E4897D720E21630002AD654 /* Alamofire.framework */,
 				9E4897D820E21630002AD654 /* Kingfisher.framework */,
+				3F382567A7B1E1BAB81E87FF /* Pods_Example.framework */,
+				14EF8492A52D18073D890C1B /* Pods_TLNetTool.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE0F9682D949282B75AAA742 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0878241EEFFB6AC00C909BB /* Pods-Example.debug.xcconfig */,
+				BE2128472982821A2B8C38D1 /* Pods-Example.release.xcconfig */,
+				BE6C1A74145A4128BC3000A4 /* Pods-TLNetTool.debug.xcconfig */,
+				EDDDE7C924C0E433FB623BA5 /* Pods-TLNetTool.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +145,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E4897B820E211E5002AD654 /* Build configuration list for PBXNativeTarget "TLNetTool" */;
 			buildPhases = (
+				18AEB4549F73C8487BAA145C /* [CP] Check Pods Manifest.lock */,
 				9E4897AB20E211E5002AD654 /* Sources */,
 				9E4897AC20E211E5002AD654 /* Frameworks */,
 				9E4897AD20E211E5002AD654 /* Headers */,
@@ -178,15 +164,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E4897D320E214A4002AD654 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
+				FB046FA0D3F4C73054614D9B /* [CP] Check Pods Manifest.lock */,
 				9E4897C020E214A3002AD654 /* Sources */,
 				9E4897C120E214A3002AD654 /* Frameworks */,
 				9E4897C220E214A3002AD654 /* Resources */,
-				9E4897E720E217EC002AD654 /* Embed Frameworks */,
+				2A483809C72D5BBCF2A72F9A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9E4897E220E217EC002AD654 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -251,6 +237,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18AEB4549F73C8487BAA145C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TLNetTool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A483809C72D5BBCF2A72F9A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB046FA0D3F4C73054614D9B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9E4897AB20E211E5002AD654 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -272,14 +322,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9E4897E220E217EC002AD654 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9E4897AF20E211E5002AD654 /* TLNetTool */;
-			targetProxy = 9E4897E120E217EC002AD654 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9E4897CA20E214A3002AD654 /* Main.storyboard */ = {
@@ -423,6 +465,7 @@
 		};
 		9E4897B920E211E5002AD654 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE6C1A74145A4128BC3000A4 /* Pods-TLNetTool.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -454,6 +497,7 @@
 		};
 		9E4897BA20E211E5002AD654 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDDDE7C924C0E433FB623BA5 /* Pods-TLNetTool.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -484,8 +528,8 @@
 		};
 		9E4897D420E214A4002AD654 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0878241EEFFB6AC00C909BB /* Pods-Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -506,8 +550,8 @@
 		};
 		9E4897D520E214A4002AD654 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE2128472982821A2B8C38D1 /* Pods-Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (

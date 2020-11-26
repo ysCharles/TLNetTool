@@ -49,7 +49,8 @@ public class NetUtils: NSObject {
         
         let encoding : ParameterEncoding = parameterType == .form ? URLEncoding.default : JSONEncoding.default
         
-        let request = manager.request(urlString, method: method, parameters: params, encoding: encoding, headers: nil)
+//        let request = manager.request(urlString, method: method, parameters: params, encoding: encoding, headers: nil)
+        let request = manager.request(urlString, method: method, parameters: params, encoding: encoding, headers: nil, interceptor: interceptor, requestModifier: nil)
         //新的请求 加入字典
         requestTasks[key] = request
         
@@ -93,7 +94,44 @@ public class NetUtils: NSObject {
                 progressClosure: @escaping (Double)->Void,
                 success: @escaping SuccessClosure,
                 failure:@escaping FailureClosure) {
-        manager.upload(multipartFormData: { (multipartFormData) in
+//        manager.upload(multipartFormData: { (multipartFormData) in
+//            //判断数据字典里的数据类型 Data为上传文件， String 为 普通参数
+//            if data.count > 0 {
+//                for (k, v) in data {
+//                    if v is Data {
+//                        multipartFormData.append(v as! Data, withName: k)
+//                    } else if v is String {
+//                        guard let strData = (v as! String).data(using: .utf8) else {
+//                            continue
+//                        }
+//                        multipartFormData.append( strData, withName: k)
+//                    } else {
+////                        proLog("错误的参数格式")
+//                        failure("请设置正确的参数格式")
+//                    }
+//                }
+//            }
+//            
+//        }, to: urlString, encodingCompletion: { (result) in
+//            switch result {
+//            case .success(let uploadRequest, _, _):
+//                uploadRequest.uploadProgress(closure: { (progress) in
+//                    //这里处理进度问题
+//                    progressClosure(progress.fractionCompleted)
+//                }).responseString(completionHandler: { (response) in
+//                    switch response.result {
+//                    case .success(let value):
+//                        success(value)
+//                    case .failure(let error):
+//                        failure(error.localizedDescription)
+//                    }
+//                })
+//            case .failure(let error):
+//                failure(error.localizedDescription)
+//            }
+//        })
+        
+        let request = manager.upload(multipartFormData: { (multipartFormData) in
             //判断数据字典里的数据类型 Data为上传文件， String 为 普通参数
             if data.count > 0 {
                 for (k, v) in data {
@@ -110,37 +148,19 @@ public class NetUtils: NSObject {
                     }
                 }
             }
-            
-        }, to: urlString, encodingCompletion: { (result) in
-            switch result {
-            case .success(let uploadRequest, _, _):
-                uploadRequest.uploadProgress(closure: { (progress) in
-                    //这里处理进度问题
-                    progressClosure(progress.fractionCompleted)
-                }).responseString(completionHandler: { (response) in
-                    switch response.result {
-                    case .success(let value):
-                        success(value)
-                    case .failure(let error):
-                        failure(error.localizedDescription)
-                    }
-                })
-//                    .responseJSON(completionHandler: { (response) in
-//                    switch response.result {
-//                    case .success(let value):
-//                        guard let v = value as? [String: Any] else {
-//                            failure("返回的数据格式不正确，请确认")
-//                            return
-//                        }
-//                        success(v)
-//                    case .failure(let error):
-//                        failure(error.localizedDescription)
-//                    }
-//                })
+        }, to: urlString, interceptor: interceptor)
+        
+        request.uploadProgress { (progress) in
+            //这里处理进度问题
+            progressClosure(progress.fractionCompleted)
+        }.responseString { (response) in
+            switch response.result {
+            case .success(let value):
+                success(value)
             case .failure(let error):
                 failure(error.localizedDescription)
             }
-        })
+        }
     }
     
     // MARK: -
@@ -148,7 +168,7 @@ public class NetUtils: NSObject {
     private static let shared = NetUtils()
     /// 私有化构造函数 保证单例
     private override init() {
-        manager = SessionManager.default
+        manager = Session.default
     }
     
     /// 请求编码 key
@@ -168,8 +188,9 @@ public class NetUtils: NSObject {
     }
     
     // MARK:- 私有属性
-    private let manager: SessionManager
+    private let manager: Session
     private var requestTasks = [String : Request]()
+    private var interceptor : Interceptor? = nil
 }
 
 // MARK:- 公开方法 （get、 post、设置 request 适配器、upload）
@@ -244,21 +265,15 @@ extension NetUtils {
     ///
     /// - Parameter adapter: 适配器
     public static func setAdapter(adapter: RequestAdapter) {
-        shared.manager.adapter = adapter
+        let interceptor = Interceptor(adapters: [adapter], retriers: [], interceptors: [])
+        shared.interceptor = interceptor
     }
 }
 
 // MARK:- request适配器
 /// 给 request 添加 header
 public class RequestHeaderAdapter: RequestAdapter {
-    
-    private var headers: [String: String]
-    
-    public init(headers: [String: String]) {
-        self.headers = headers
-    }
-    
-    public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+    public func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         var urlRequest = urlRequest
         
         //这里可以判断 request 确定哪些 request 需要加 header
@@ -268,8 +283,28 @@ public class RequestHeaderAdapter: RequestAdapter {
             }
         }
         
-        return urlRequest
+        completion(.success(urlRequest))
     }
+    
+    
+    private var headers: [String: String]
+    
+    public init(headers: [String: String]) {
+        self.headers = headers
+    }
+    
+//    public func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
+//        var urlRequest = urlRequest
+//
+//        //这里可以判断 request 确定哪些 request 需要加 header
+//        if headers.count > 0 {
+//            for (key, value) in headers {
+//                urlRequest.setValue(value, forHTTPHeaderField: key)
+//            }
+//        }
+//
+//        return urlRequest
+//    }
 }
 
 

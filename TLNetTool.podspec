@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TLNetTool"
-  s.version      = "0.7"
+  s.version      = "0.8"
   s.summary      = "基于 Alamofire 封装的网络库，基于 KingFisher 封装的网络图片加载方式"
 
 
