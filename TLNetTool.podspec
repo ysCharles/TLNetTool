@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TLNetTool"
-  s.version      = "0.9"
+  s.version      = "1.0"
   s.summary      = "基于 Alamofire 封装的网络库，基于 KingFisher 封装的网络图片加载方式"
 
 
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 
 
   # 
-  s.dependency 'Kingfisher', '~> 6.3.0'
+  s.dependency 'Kingfisher', '4.10.1'
   s.dependency 'Alamofire', '~> 5.4.4'
   s.swift_version = '5'
 end

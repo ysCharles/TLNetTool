@@ -15,7 +15,7 @@ let package = Package(
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         .package(name:"Alamofire", url: "https://gitee.com/charleston/Alamofire.git", .upToNextMajor(from: "5.4.0")),
-        .package(name: "Kingfisher", url: "https://gitee.com/charleston/Kingfisher.git", .upToNextMajor(from: "6.3.0")),
+        .package(name: "Kingfisher", url: "https://gitee.com/charleston/Kingfisher.git", .upToNextMajor(from: "5.15.0")),
         // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
