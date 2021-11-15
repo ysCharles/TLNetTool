@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TLNetTool"
-  s.version      = "0.8"
+  s.version      = "0.9"
   s.summary      = "基于 Alamofire 封装的网络库，基于 KingFisher 封装的网络图片加载方式"
 
 
@@ -15,14 +15,14 @@ Pod::Spec.new do |s|
   s.platform 	 = :ios, "10.0"
 
 
-  s.source_files  = "Sources/*.swift"
+  s.source_files  = "Sources/TLNetTool/*.swift"
   #s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
 
   # 
-  s.dependency 'Kingfisher'
-  s.dependency 'Alamofire'
+  s.dependency 'Kingfisher', '~> 6.3.0'
+  s.dependency 'Alamofire', '~> 5.4.4'
   s.swift_version = '5'
 end
