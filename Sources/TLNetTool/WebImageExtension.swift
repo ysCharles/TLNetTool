@@ -18,21 +18,21 @@ extension UIImageView {
     ///   - placeHolder: 占位图
     public func setWebImage(urlString: String, placeHolder: UIImage? = nil, completionHandler: (()->Void)? = nil) {
         self.kf.indicatorType = .activity
-//        self.kf.setImage(with: URL(string: urlString), placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
-//
-//        }) { (result) in
-//            if let c = completionHandler {
-//                c()
-//            }
-//        }
-        self.kf.setImage(with: URL(string: urlString) , placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
+        self.kf.setImage(with: URL(string: urlString), placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
 
-        }) { (image, error, type, url) in
-
+        }) { (result) in
             if let c = completionHandler {
                 c()
             }
         }
+//        self.kf.setImage(with: URL(string: urlString) , placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
+//
+//        }) { (image, error, type, url) in
+//
+//            if let c = completionHandler {
+//                c()
+//            }
+//        }
     }
 }
 
@@ -45,21 +45,21 @@ extension UIButton {
     ///   - state: UIControlState
     ///   - placeHolder: 占位图
     public func setWebImage(urlString: String, for state: UIControl.State, placeHolder: UIImage? = nil, completionHandler: (()->Void)? = nil) {
-//        self.kf.setImage(with: URL(string: urlString), for: state, placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
-//
-//        }) { (result) in
-//            if let c = completionHandler {
-//                c()
-//            }
-//        }
         self.kf.setImage(with: URL(string: urlString), for: state, placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
 
-        }) { (image, error, type, url) in
-
+        }) { (result) in
             if let c = completionHandler {
                 c()
             }
         }
+//        self.kf.setImage(with: URL(string: urlString), for: state, placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
+//
+//        }) { (image, error, type, url) in
+//
+//            if let c = completionHandler {
+//                c()
+//            }
+//        }
     }
     
     /// 设置加载网络图片
@@ -69,21 +69,21 @@ extension UIButton {
     ///   - state: UIControlState
     ///   - placeHolder: 占位图
     public func setBackgroundWebImage(urlString: String, for state: UIControl.State, placeHolder: UIImage? = nil, completionHandler: (()->Void)? = nil) {
-//        self.kf.setBackgroundImage(with: URL(string: urlString), for: state, placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
-//            
-//        }) { (result) in
-//            if let c = completionHandler {
-//                c()
-//            }
-//        }
         self.kf.setBackgroundImage(with: URL(string: urlString), for: state, placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
             
-        }) { (image, error, type, url) in
-            
+        }) { (result) in
             if let c = completionHandler {
                 c()
             }
         }
+//        self.kf.setBackgroundImage(with: URL(string: urlString), for: state, placeholder: placeHolder, options: [.transition(.fade(1))], progressBlock: { (completed, total) in
+//
+//        }) { (image, error, type, url) in
+//
+//            if let c = completionHandler {
+//                c()
+//            }
+//        }
     }
 }
 
